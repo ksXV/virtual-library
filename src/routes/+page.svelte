@@ -17,6 +17,6 @@
   <img
     src="/images/tiny-people-reading-books.png"
     alt="tiny-people-reading-books"
-    class="object-contain aspect-[3/2] w-[300px] 2xl:w-[900px]"
+    class="object-contain aspect-[3/2] w-[700px] 2xl:w-[900px]"
   />
 </header>
