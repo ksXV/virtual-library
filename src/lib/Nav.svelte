@@ -9,18 +9,22 @@
 <svelte:window bind:innerWidth={screenWidth} />
 
 <nav
-  class="flex flex-row-reverse justify-between items-center px-10 bg-white fixed top-0 w-full"
+  class="flex flex-row-reverse justify-between items-center px-10 2xl:px-20 bg-white fixed top-0 w-full"
 >
-  {#if screenWidth > 700}
-    <Menu />
-  {:else}
+  <!--component
+ 
+  {#if screenWidth < 700}
     <Hamburger bind:open />
+  {:else}
+  -->
+  <Menu open />
+  <!--
+  
   {/if}
-  <a href="/" target="">
-    <img
-      src="/images/logo.svg"
-      alt="logo"
-      class="object-contain cursor-pointer aspect-square md:w-[80px] w-[60px]"
-    />
-  </a>
+-->
+  <img
+    src="/images/logo.svg"
+    alt="logo"
+    class="object-contain cursor-pointer aspect-square md:w-[80px] w-[60px] 2xl:w-[90px]"
+  />
 </nav>
