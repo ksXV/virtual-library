@@ -7,28 +7,36 @@
     @apply px-6 py-4 font-medium text-base 2xl:text-xl text-black cursor-pointer;
   }
 
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 768px) {
     .nav-wrapper {
-      @apply flex-row flex absolute bottom-0;
+      @apply flex-col flex relative right-0 w-screen h-screen max-w-none flex-shrink-0 z-10;
     }
     .nav-route-wrapper {
-      @apply border-b-[#fofofo] border-b-2 px-14 rounded bg-white;
+      @apply border-b-[#fofofo] border-b-2 text-center px-14 rounded bg-white;
     }
   }
 </style>
 
 <script lang="ts">
-  export let open: boolean
+  import { Hamburger } from 'svelte-hamburgers'
+  const mdScreenWidth = 768
+  let open: boolean = false
+  export let screenWidth: number
 </script>
 
-<ul class="nav-wrapper">
-  <li class="nav-route-wrapper">
-    <a href="/" target="">Home</a>
-  </li>
-  <li class="nav-route-wrapper">
-    <a href="/browse" target="">Browse</a>
-  </li>
-  <li class="nav-route-wrapper">
-    <a href="/faq" target="">FAQ</a>
-  </li>
-</ul>
+<div class="md:hidden block absolute top-0 p-1 right-0 z-40">
+  <Hamburger bind:open />
+</div>
+{#if open || screenWidth > mdScreenWidth}
+  <ul class="nav-wrapper">
+    <li class="nav-route-wrapper">
+      <a href="/" target="">Home</a>
+    </li>
+    <li class="nav-route-wrapper">
+      <a href="/browse" target="">Browse</a>
+    </li>
+    <li class="nav-route-wrapper">
+      <a href="/faq" target="">FAQ</a>
+    </li>
+  </ul>
+{/if}
