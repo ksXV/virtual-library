@@ -10,8 +10,5 @@ module.exports = {
   theme: {
     extend: {}
   },
-  plugins: [
-    // 3. Append the Skeleton plugin to the end of this list
-    ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
-  ]
+  plugins: [...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()]
 }
