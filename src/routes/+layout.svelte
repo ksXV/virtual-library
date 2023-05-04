@@ -10,6 +10,7 @@
 </script>
 
 <svelte:body bind:clientWidth={screenWidth} />
+<svelte:head>Librarie Virtuala</svelte:head>
 <Nav bind:screenWidth />
 <main>
   <slot />
