@@ -33,10 +33,10 @@
 {#if open || screenWidth > mdScreenWidth}
   <ul class="nav-wrapper">
     <a on:click={closeBurger} href="/" target="">
-      <li class="nav-route-wrapper">Home</li>
+      <li class="nav-route-wrapper">Acasa</li>
     </a>
     <a on:click={closeBurger} href="/browse" target="">
-      <li class="nav-route-wrapper">Browse</li>
+      <li class="nav-route-wrapper">Răsfoiește</li>
     </a>
     <a on:click={closeBurger} href="/faq" target="">
       <li class="nav-route-wrapper">FAQ</li>
