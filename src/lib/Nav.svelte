@@ -6,7 +6,7 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 <nav
-  class={`flex md:flex-row-reverse justify-between items-center md:px-10 px-2 2xl:px-20 bg-white fixed top-0 w-full`}
+  class="flex md:flex-row-reverse justify-between items-center md:px-6 px-2 2xl:px-20 bg-white fixed top-0 w-full"
 >
   <Menu bind:screenWidth />
   <img

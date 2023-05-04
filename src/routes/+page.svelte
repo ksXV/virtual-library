@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <header
   id="homepage"
   class="flex flex-col lg:flex-row justify-between items-center w-full md:px-10 px-5 2xl:px-20 mt-20"

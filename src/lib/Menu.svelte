@@ -21,6 +21,9 @@
   import { Hamburger } from 'svelte-hamburgers'
   const mdScreenWidth = 768
   let open: boolean = false
+  function closeBurger() {
+    open = false
+  }
   export let screenWidth: number
 </script>
 
@@ -29,14 +32,14 @@
 </div>
 {#if open || screenWidth > mdScreenWidth}
   <ul class="nav-wrapper">
-    <li class="nav-route-wrapper">
-      <a href="/" target="">Home</a>
-    </li>
-    <li class="nav-route-wrapper">
-      <a href="/browse" target="">Browse</a>
-    </li>
-    <li class="nav-route-wrapper">
-      <a href="/faq" target="">FAQ</a>
-    </li>
+    <a on:click={closeBurger} href="/" target="">
+      <li class="nav-route-wrapper">Home</li>
+    </a>
+    <a on:click={closeBurger} href="/browse" target="">
+      <li class="nav-route-wrapper">Browse</li>
+    </a>
+    <a on:click={closeBurger} href="/faq" target="">
+      <li class="nav-route-wrapper">FAQ</li>
+    </a>
   </ul>
 {/if}
